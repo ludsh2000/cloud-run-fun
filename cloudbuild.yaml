@@ -4,6 +4,20 @@ steps:
 images:
 - 'gcr.io/$PROJECT_ID/nginx'
 
+# Deploy image to Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'nginxdemo'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/nginx'
+  - '--region'
+  - 'us_central1'
+  - '--platform'
+  - 'managed'
+
+
 
 
 
