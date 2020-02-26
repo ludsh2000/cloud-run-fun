@@ -7,11 +7,11 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - '[nginxdemo]'
+  - 'nginxdemo'
   - '--image'
   - 'gcr.io/$PROJECT_ID/nginx'
   - '--region'
-  - '[us_central1]'
+  - 'us_central1'
   - '--platform'
   - 'managed'
 images:
