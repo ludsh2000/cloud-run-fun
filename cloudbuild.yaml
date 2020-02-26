@@ -3,3 +3,5 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/nginx', 'nginx/' ]
 images:
 - 'gcr.io/$PROJECT_ID/nginx'
+
+
