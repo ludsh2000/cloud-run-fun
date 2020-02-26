@@ -9,13 +9,12 @@ steps:
   - 'deploy'
   - 'nginxdemo'
   - '--image'
-  - 'gcr.io/$PROJECT_ID/nginx'
+  - 'gcr.io/jerry-customer-demo/nginx'
   - '--region'
   - 'us_central1'
   - '--platform'
   - 'managed'
-images:
-- 'gcr.io/$PROJECT_ID/nginx'
+  - '--allow-unauthenticated'
 
 
 
