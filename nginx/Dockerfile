@@ -5,8 +5,6 @@ COPY index.html /etc/nginx/html
 COPY index.html /usr/share/nginx/html
 RUN  date >> /usr/share/nginx/html/index.html
 RUN  date >> /etc/nginx/html/index.html
-CMD /bin/bash -c "exec nginx -g 'daemon off;'"
-
 RUN rm /etc/nginx/conf.d/default.conf
 COPY site.template /etc/nginx/conf.d/site.template
 CMD /bin/bash -c "envsubst < /etc/nginx/conf.d/site.template > /etc/nginx/conf.d/site.conf && exec nginx -g 'daemon off;'"
