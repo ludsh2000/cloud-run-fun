@@ -1,9 +1,7 @@
 FROM nginx
 RUN  rm /usr/share/nginx/html/index.html
-RUN  mkdir /etc/nginx/html
-COPY index.html /etc/nginx/html
-COPY index.html /usr/share/nginx/html
-RUN  date >> /usr/share/nginx/html/index.html
+RUN  mkdir /etc/nginx/html/news
+COPY index.html /etc/nginx/html/news
 RUN  date >> /etc/nginx/html/index.html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY site.template /etc/nginx/conf.d/site.template
