@@ -1,7 +1,8 @@
 FROM nginx
 RUN  rm /usr/share/nginx/html/index.html
 RUN  mkdir /etc/nginx/html
-RUN  > /var/log/nginx/error.log
+RUN  echo "" >> /var/log/nginx/error.log
+RUN  sudo chmod 766 /var/log/nginx/error.log
 RUN  mkdir /etc/nginx/html/news
 COPY index.html /etc/nginx/html/news
 RUN  date >> /etc/nginx/html/news/index.html
