@@ -20,7 +20,7 @@ steps:
   - 'cluster-demo'
   - '--cluster-location'
   - 'us-central1-c'
-  - '--allow-unauthenticated'
+  
 
 
 
